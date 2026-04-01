@@ -1,0 +1,2 @@
+Hello Hanny!
+Welcome to Java File Handling.
