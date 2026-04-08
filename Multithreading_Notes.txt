@@ -1,0 +1,43 @@
+ADVANCED JAVA NOTES: PART 2 - MULTITHREADING
+============================================
+
+1. Introduction
+   Multithreading is a process of executing multiple threads simultaneously to maximize CPU utilization.
+
+2. Ways to create a Thread:
+   - Extending Thread class: `class MyThread extends Thread { ... }`
+   - Implementing Runnable interface: `class MyRunnable implements Runnable { ... }` (Recommended)
+
+3. Thread Life Cycle:
+   - New: Thread object created.
+   - Runnable: Thread starting (`start()` called).
+   - Running: CPU is executing the thread.
+   - Blocked/Waiting: Waiting for a resource or notification.
+   - Dead: Execution finished.
+
+4. Essential Methods:
+   - `start()`: Registers thread with scheduler.
+   - `run()`: Entry point for the thread.
+   - `sleep(ms)`: Pauses execution.
+   - `join()`: Waits for another thread to die.
+   - `yield()`: Suggests that the current thread can give up CPU.
+
+5. Synchronization:
+   Used to prevent "Race Conditions" when multiple threads access shared resources.
+   - Synchronized methods: `public synchronized void method() { ... }`
+   - Synchronized blocks: `synchronized(object) { ... }`
+
+6. Advanced Concurrency (Executor Service):
+   - Avoid creating raw threads manually for large apps.
+   - Use `Executors.newFixedThreadPool(n)` to manage a pool of threads.
+   
+   Example:
+   ExecutorService executor = Executors.newFixedThreadPool(5);
+   executor.execute(() -> System.out.println("Executing..."));
+   executor.shutdown();
+
+7. Inter-thread Communication:
+   - `wait()`: Releases the lock and waits.
+   - `notify()`: Wakes up one waiting thread.
+   - `notifyAll()`: Wakes up all waiting threads.
+   (Must be called from a synchronized context)

@@ -1,0 +1,48 @@
+ADVANCED JAVA LEARNING ROADMAP
+==============================
+
+Phase 1: Deep Dive into Core Java (The Essentials)
+--------------------------------------------------
+1. Java Collections Framework (Advanced usage)
+2. Java Generics
+3. Exception Handling (Best practices)
+4. Java I/O (File handling, NIO.2)
+
+Phase 2: Multithreading & Concurrency
+-------------------------------------
+1. Lifecycle of a thread
+2. Synchronization and Locks
+3. Executor Service
+4. Callable and Future
+5. Concurrent Collections
+
+Phase 3: Java Database Connectivity (JDBC)
+------------------------------------------
+1. JDBC Drivers
+2. Connection, Statement, PreparedStatement
+3. Transaction Management
+4. Batch Processing
+
+Phase 4: Java 8+ Features (Modern Java)
+---------------------------------------
+1. Lambda Expressions
+2. Stream API
+3. Optional Class
+4. Date & Time API
+
+Phase 5: Java EE (Web Development Basics)
+-----------------------------------------
+1. Servlets
+2. JSP (JavaServer Pages)
+3. Session Management & Filters
+
+Phase 6: Professional Frameworks
+--------------------------------
+1. Hibernate (ORM)
+2. Spring Framework (Core, IoC, DI)
+3. Spring Boot (Microservices)
+
+Recommended Resources:
+- Oracle Java Documentation
+- Baeldung (Great for tutorials)
+- Java Brains (YouTube)

@@ -1,0 +1,26 @@
+ADVANCED JAVA: LAMBDA EXPRESSIONS & STREAMS
+=======================================
+
+1. Lambda Expressions
+   - Description: A short way to write an anonymous method.
+   - Syntax: `(parameters) -> { body }`
+   - Only works with "Functional Interfaces" (Interfaces with exactly one abstract method, like Runnable or Comparator).
+
+2. Method References (::)
+   - A shorthand for Lambdas.
+   - Example: `System.out::println` instead of `x -> System.out.println(x)`.
+
+3. Stream API
+   - Purpose: To process collections of objects in a functional style.
+   - Key Operations:
+     - Intermediate (return a stream): `filter()`, `map()`, `sorted()`, `distinct()`.
+     - Terminal (return a result): `collect()`, `forEach()`, `reduce()`, `count()`, `sum()`.
+
+4. Optional Class
+   - Avoids `if (obj != null)` checks.
+   - Methods: `isPresent()`, `ifPresent()`, `orElse()`, `orElseThrow()`.
+
+5. Why use them?
+   - Less boilerplate code.
+   - Improved readability.
+   - Parallel processing made easy (`parallelStream()`).

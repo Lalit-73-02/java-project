@@ -1,0 +1,27 @@
+ADVANCED JAVA: COLLECTIONS & GENERICS
+====================================
+
+1. Why Java Collections?
+   The Collections Framework provides high-performance implementation of common data structures (Lists, Sets, Maps).
+
+2. Key Interfaces & Implementations:
+   - List: ArrayList (Fast random access), LinkedList (Fast insertion/deletion).
+   - Set: HashSet (Fast), TreeSet (Sorted), LinkedHashSet (Insertion order).
+   - Map: HashMap (Key-Value), TreeMap (Sorted keys), ConcurrentHashMap (Thread-safe).
+
+3. Advanced Sorting:
+   - Comparable: For "Natural" ordering (uses `compareTo`).
+   - Comparator: For "Custom" ordering (uses `compare`).
+
+4. Generics (<T>):
+   - Generics allow you to parameterize types.
+   - Benefit: Type safety at compile time, no need for explicit casting.
+   - Wildcards:
+     - <?> : Unknown type.
+     - <? extends T> : Upper bounded (T or its subclasses).
+     - <? super T> : Lower bounded (T or its superclasses).
+
+5. Best Practices:
+   - Always use the interface type for the reference (e.g., `List<String> list = new ArrayList<>();`).
+   - Use `Collections.unmodifiableList()` for read-only lists.
+   - Use `ConcurrentHashMap` in multithreaded environments.

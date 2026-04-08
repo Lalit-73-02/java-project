@@ -1,0 +1,27 @@
+ADVANCED JAVA: REFLECTION API
+===============================
+
+1. What is Reflection?
+   Reflection is a feature in Java that allows a program to inspect and modify its own structure (classes, interfaces, fields, and methods) at runtime.
+
+2. Why use it?
+   - To inspect classes at runtime.
+   - To create objects of classes whose names are not known until runtime.
+   - To access private fields and methods (Powerful but dangerous!).
+   - It is the engine behind frameworks like Spring, Hibernate, and JUnit.
+
+3. Key Classes in `java.lang.reflect`:
+   - Class: Represents the class itself.
+   - Method: Represents a method of a class.
+   - Field: Represents a variable of a class.
+   - Constructor: Represents a constructor.
+
+4. How to get a Class object:
+   - `Class clazz = MyClass.class;`
+   - `Class clazz = obj.getClass();`
+   - `Class clazz = Class.forName("com.package.MyClass");`
+
+5. Accessing Private Members:
+   Field field = clazz.getDeclaredField("privateVar");
+   field.setAccessible(true); // This "breaks" the private rule!
+   field.set(obj, "new value");

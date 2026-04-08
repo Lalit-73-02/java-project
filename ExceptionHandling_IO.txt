@@ -1,0 +1,27 @@
+ADVANCED JAVA: EXCEPTION HANDLING & NIO.2
+=======================================
+
+1. Advanced Exception Handling
+------------------------------
+- Try-with-resources: Automatically closes resources (BufferReader, Connection, etc.) that implement AutoCloseable.
+- Multi-catch: Catch multiple exceptions in one block: `catch (IOException | SQLException e) { ... }`.
+- Custom Exceptions: Create your own by extending `Exception` (checked) or `RuntimeException` (unchecked).
+- Rethrowing Exceptions: Using `throw e;` to pass the error up the stack.
+
+2. Java NIO.2 (New I/O)
+-----------------------
+Introduced in Java 7, `java.nio.file` is much more powerful than the old `java.io.File`.
+- Path: Interface representing a file/directory path.
+- Files: Utility class with static methods for operating on files (copy, move, delete, read, write).
+- Paths: Utility class to create Path objects.
+
+Key Modern Methods:
+- `Files.writeString(path, content)`: Quick write (Java 11+).
+- `Files.readString(path)`: Quick read (Java 11+).
+- `Files.list(path)`: List directory contents as a Stream.
+
+3. Best Practices
+-----------------
+- Never catch `Exception` or `Throwable` generic types unless necessary. Catch specific ones.
+- Don't swallow exceptions (empty catch blocks).
+- Always use `try-with-resources` for files and network connections.
